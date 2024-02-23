@@ -6,7 +6,7 @@ adventurePortal is a web application designed to inspire and facilitate travel p
 
 ## Live Demo
 
-View the live demo of adventurePortal here: [adventurePortal Live Demo](https://yourusername.github.io/adventurePortal/)
+View the live demo of adventurePortal here: [adventurePortal Live Demo](https://curtly4.github.io/adventurePortal/)  
 
 ## Features
 
