@@ -1,0 +1,400 @@
+@import url("https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap");
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-image: url(images/adventurePortal.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+}
+
+.home-container {
+  position: relative;
+}
+
+/* ----------------------About section------------------- */
+.team-member-img img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.team-member-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  height: 200px;
+  width: 200px;
+}
+
+#About {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#about {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  color: #ffd700;
+  padding: 20px;
+}
+
+.about-header {
+  font-family: "Protest Guerrilla", cursive;
+  font-size: 50px;
+  font-weight: 700;
+  padding: 20px;
+  text-align: left; /* Ensures text alignment to the left */
+  text-shadow: 2px 2px 2px #000000;
+}
+
+.team h2 {
+  font-family: "Protest Guerrilla", cursive;
+  font-size: 50px;
+  font-weight: 700;
+  padding: 20px;
+  text-align: left; /* Ensures text alignment to the left */
+  text-shadow: 2px 2px 2px #000000;
+}
+
+.about-content,
+.team {
+  flex: 1;
+}
+
+.team-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px; /* Space between team members */
+}
+
+.team-member {
+  text-align: center;
+}
+
+.team-member-img img {
+  width: 200px; /* Adjust based on preference */
+  height: auto;
+  border-radius: 50%; /* Circular images */
+}
+
+.team-member-info h3,
+.team-member-info p {
+  margin: 5px 0;
+}
+
+.about-text {
+  display: flex;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 20px;
+  text-align: left; /* Ensures text alignment to the left */
+  text-shadow: 2px 2px 2px #000000;
+}
+/* -------------------------------------Navbar------------------------------ */
+.site-name {
+  font-family: Protest Guerrilla;
+  color: #ffd700;
+}
+
+.navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Ensures content is spaced between */
+  background-image: linear-gradient(to right, black, lightgrey);
+  padding: 10px 20px;
+  color: white;
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center; /* Centers items vertically */
+  list-style: none;
+  gap: 10px;
+  position: absolute;
+}
+
+.brand-logo i.fa-plane {
+  animation: planeLanding 1s ease-out forwards;
+}
+
+@keyframes planeLanding {
+  0% {
+    transform: translate(-100vw, -50vh) rotate(-45deg);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+#nav-links li a {
+  margin-right: 20px;
+  text-decoration: none;
+  color: white;
+}
+
+#nav-links li a:hover {
+  text-decoration: underline;
+  color: #ffd700;
+}
+
+.brand-logo i {
+  margin-right: 10px;
+  color: #ffd700;
+  width: 5px;
+}
+/* ------------------------Search------------------------ */
+.search-container {
+  display: flex;
+  position: relative; /* Positions the search and reset buttons relative to the search-container */
+  align-items: center;
+  width: auto;
+}
+
+.search-container i {
+  position: absolute;
+  left: 250px; /* Adjust this value based on your padding and icon size */
+  color: grey; /* Adjust color as needed */
+}
+
+.search-container input[type="text"] {
+  padding: 5px 200px 5px 10px; /* Adjust right padding to make room for buttons */
+  margin-right: 10px;
+  flex-grow: 1;
+  border-radius: 50px;
+  border: 2px solid #ccc; /* Give some border */
+  width: 425px;
+}
+
+.search-container button {
+  position: absolute;
+  right: 75px; /* Adjust based on the size of the buttons */
+  padding: 5px 10px;
+  margin: 0;
+  cursor: pointer;
+  border: none;
+  color: white;
+  height: calc(100% - 15px); /* Adjust height to match the input field */
+}
+
+.search-container button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transition: 0.5s;
+  outline: none;
+}
+
+#searchBtn {
+  right: 85px; /* Position for the search button, adjust based on your field size */
+  background-color: #ffd700;
+  border-radius: 5px;
+  opacity: 80%;
+}
+
+#resetBtn {
+  background-color: #f44336;
+  border-radius: 5px; /* Match input field's border-radius */
+  right: 25px; /* Position reset button to the extreme right */
+  opacity: 80%;
+}
+
+.searchResult {
+  display: flex;
+  justify-content: flex-end; /* Center the results container */
+  padding: 20px; /* Add some padding */
+  position: absolute;
+  z-index: 10; /* Ensure this is higher than the z-index of .element-behind, if any */
+  margin-left: 500px;
+}
+
+#result {
+  display: none;
+  margin-top: 5px; /* Add space between the navbar and the results */
+  background-color: rgba(255, 255, 255, 0.8); /* Optional: Add a slight background */
+  width: 500px; /* Adjust width as necessary */
+  max-width: 90%; /* Prevent the container from being too wide on large screens */
+  border-radius: 5px; /* Optional: Rounded corners for the results container */
+  padding: 20px; /* Padding inside the results container */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional: Add some shadow for depth */
+}
+
+/* ----------------------------Home page----------------------------- */
+#bookingBtn {
+  border-radius: 5px;
+  background-color: #ffd700;
+  color: white;
+  border: none;
+  padding: 5px 5px;
+  text-align: center;
+  text-decoration: none;
+  
+}
+
+#bookingBtn:hover {
+  background-color: #0057B8;
+  color: #ffd700;
+  box-shadow: #ccc;
+  transition: 0.5s;
+  opacity: 0.8;
+}
+
+#home {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: row;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+#home p {
+  font-size: 5px;
+  margin-bottom: 50px;
+  padding: 10px;
+  width: calc(100% - 300px);
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  font-weight: 700;
+  padding: 20px;
+  text-align: left; /* Ensures text alignment to the left */
+  text-shadow: 2px 2px 2px #000000;
+}
+
+.adventure {
+  font-family: "Protest Guerrilla", cursive;
+  font-size: 50px;
+  font-weight: 700;
+  padding: 20px;
+  text-align: left; /* Ensures text alignment to the left */
+  text-shadow: 2px 2px 2px #000000;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+#home ul li {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+
+.home-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  margin: 10px;
+  padding-left: 20px;
+}
+
+/* -------------------------Social links------------------------------------- */
+
+#social-links {
+  position: relative;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#social-links i {
+  margin-top: 25px;
+  cursor: pointer;
+}
+
+.vertical-divider {
+  width: 3px;
+  height: 300px;
+  background-color: darkgray;
+  margin: 10px 0 100px 0;
+}
+
+@media screen and (max-width: 1000px) {
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url(images/adventurePortal.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+
+  .navbar {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .nav-links,
+  .brand-logo {
+    flex-direction: row;
+    align-items: center;
+    /* Align items to the center for a stacked layout */
+    width: 100%;
+  }
+
+  .nav-links li a,
+  .search-container {
+    width: 100%;
+    /* Make nav links and search container take full width */
+    text-align: center;
+    /* Center the text of nav links */
+    padding: 10px 0;
+    /* Add some padding for touch targets */
+  }
+
+  .search-container {
+    justify-content: center;
+    /* Center the search container */
+    margin-top: 10px;
+    /* Add some space above the search container */
+  }
+
+  .search-container input[type="text"] {
+    width: 200px;
+    /* Adjust width to fit container with padding */
+    padding: 5px 45px 5px 45px;
+    /* Adjust padding to maintain inner spacing */
+    margin: 0 auto;
+    /* Center the input field */
+    right: 0;
+    position: relative;
+    /* Reset position */
+  }
+
+  .search-container button {
+    position: relative;
+    /* Reset position */
+    margin-top: 10px;
+    /* Add space between buttons */
+    width: calc(50% - 10px);
+    /* Adjust width for buttons to fit side by side */
+  }
+
+  #searchBtn,
+  #resetBtn {
+    right: 0;
+    /* Reset right position */
+    opacity: 100%;
+  }
+
+  .search-container i {
+    left: 10px;
+    /* Adjust icon position */
+  }
+}
