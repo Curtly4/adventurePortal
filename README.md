@@ -2,7 +2,7 @@
 
 ## Description
 
-adventurePortal is a web application designed to inspire and facilitate travel planning by providing personalized recommendations for destinations, including beaches, temples, and countries. Users can search for travel recommendations based on specific keywords and receive information, including descriptions and images.
+adventurePortal is a website designed to inspire and facilitate travel planning by providing personalized recommendations for destinations, including beaches, temples, and countries. Users can search for travel recommendations based on specific keywords and receive information, including descriptions and images.
 
 ## Live Demo
 
